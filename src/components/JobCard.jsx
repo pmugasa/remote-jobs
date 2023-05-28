@@ -1,25 +1,31 @@
-function JobCard() {
+function JobCard({ job }) {
   return (
-    <div>
-      <div className="bg-white h-[160px] shadow drop-shadow-sm p-4 rounded-md">
+    <div className="my-2">
+      <div className="bg-white h-[180px] shadow drop-shadow-sm p-4 rounded-md">
         <div className="flex items-center ">
           <img
-            src="https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGNvbXBhbnklMjBsb2dvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+            src={job.company_logo}
             className="w-[90px] h-[90px] object-cover rounded-md"
           />
           <div className="ml-4 h-full">
-            <div>
+            <div className="h-3/4">
               <p className="font-body font-bold text-[#334680] text-xs my-2">
-                Whatsapp
+                {job.company_name}
               </p>
-              <p className="font-normal text-lg text-[#334680] my-2">
-                Full Stack Developer
+              <p className="font-normal text-md text-[#334680] my-2 ">
+                {job.title}
               </p>
-              <p className="my-2 flex items-center justify-center border-2 border-[#334680] text-xs text-[#334680] font-bold  w-16 h-6 rounded-sm">
-                Full time
-              </p>
+              {job.job_type && (
+                <p className="my-2 flex items-center justify-center border-2 border-[#334680] text-xs text-[#334680] font-bold  w-16 h-6 rounded-sm">
+                  {job.job_type === "full_time"
+                    ? "Full time"
+                    : job.job_type === "part_time"
+                    ? "Part time"
+                    : job.job_type}
+                </p>
+              )}
             </div>
-            <div className="flex items-center justify-center  text-xs mt-4 absolute lg:right-4">
+            <div className="flex items-center justify-center  text-xs mt-4 absolute bottom-4 lg:right-4">
               <div className="flex items-center mr-4">
                 <span className="material-symbols-outlined block text-xs mr-2 text-[#B9BDCF] ">
                   public

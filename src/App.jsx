@@ -11,9 +11,14 @@ function App() {
         <div className="mx-auto h-[138px] w-full p-2 rounded-md bg-[url('/backgroundImg.png')] bg-bottom flex items-center justify-center">
           <Input />
         </div>
-        <div>
-          <FilterInputs />
-          <JobCard />
+        <div className=" lg:flex my-4 ">
+          <div className="mr-4">
+            <FilterInputs />
+          </div>
+
+          <div className="my-4 lg:w-[700px] ml-auto  ">
+            <JobCard />
+          </div>
         </div>
       </div>
     </>

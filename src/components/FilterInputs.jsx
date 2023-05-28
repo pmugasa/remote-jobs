@@ -15,7 +15,7 @@ function FilterInputs() {
         </label>
       </div>
       <h3 className="text-[#B9BDCF] text-md font-semibold my-2">LOCATION</h3>
-      <div className="mb-4 flex items-center w-full sm:w-[350px] shadow drop-shadow-sm rounded-md h-[48px] px-2 bg-white">
+      <div className="mb-4 flex items-center w-full sm:w-[350px]  shadow drop-shadow-sm rounded-md h-[48px] px-2 bg-white">
         <span className="material-symbols-outlined block text-sm text-[#B9BDCF] ">
           public
         </span>

@@ -30,7 +30,9 @@ function JobCard({ job }) {
                 <span className="material-symbols-outlined block text-xs mr-2 text-[#B9BDCF] ">
                   public
                 </span>
-                <p className="text-[#B9BDCF]">New York</p>
+                <p className="text-[#B9BDCF]">
+                  {job.candidate_required_location}
+                </p>
               </div>
               <div className="flex items-center">
                 <span className="material-symbols-outlined block text-xs mr-2 text-[#B9BDCF] ">
